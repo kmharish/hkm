@@ -12,15 +12,15 @@
 
   // Bot definitions — fixed positions in a network topology
   const bots = [
-    { x: 210, y: 210, r: 22, col: NAVY,   label: 'HUB',   type: 'hub'     },
-    { x: 100, y: 100, r: 15, col: BLUE,   label: 'DEV-1', type: 'device'  },
-    { x: 330, y: 95,  r: 15, col: SKY,    label: 'DEV-2', type: 'device'  },
-    { x: 355, y: 250, r: 15, col: BLUE,   label: 'DEV-3', type: 'device'  },
-    { x: 310, y: 360, r: 15, col: INDIGO, label: 'DEV-4', type: 'device'  },
-    { x: 130, y: 360, r: 15, col: SKY,    label: 'DEV-5', type: 'device'  },
-    { x: 60,  y: 250, r: 15, col: BLUE,   label: 'DEV-6', type: 'device'  },
-    { x: 210, y: 60,  r: 12, col: NAVY,   label: 'GW',    type: 'gateway' },
-    { x: 210, y: 370, r: 12, col: NAVY,   label: 'GW',    type: 'gateway' },
+    { x: 210, y: 210, r: 22, col: NAVY,   label: '',   type: 'hub'     },
+    { x: 100, y: 100, r: 15, col: BLUE,   label: '', type: 'device'  },
+    { x: 330, y: 95,  r: 15, col: SKY,    label: '', type: 'device'  },
+    { x: 355, y: 250, r: 15, col: BLUE,   label: '', type: 'device'  },
+    { x: 310, y: 360, r: 15, col: INDIGO, label: '', type: 'device'  },
+    { x: 130, y: 360, r: 15, col: SKY,    label: '', type: 'device'  },
+    { x: 60,  y: 250, r: 15, col: BLUE,   label: '', type: 'device'  },
+    { x: 210, y: 60,  r: 12, col: NAVY,   label: '',    type: 'gateway' },
+    { x: 210, y: 370, r: 12, col: NAVY,   label: '',    type: 'gateway' },
   ];
 
   // Edges between bots
