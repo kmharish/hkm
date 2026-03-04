@@ -12,11 +12,12 @@ const NODE_COUNT = 110;
 const CONNECT_DIST = 10;
 const nodeData = [];
 
-const nodeMat = new THREE.MeshBasicMaterial({ color: 0x00e5cc });
+// Light-theme palette: navy, blue, sky
+const navyMat = new THREE.MeshBasicMaterial({ color: 0x1d4ed8 });
+const blueMat = new THREE.MeshBasicMaterial({ color: 0x3b82f6 });
+const skyMat  = new THREE.MeshBasicMaterial({ color: 0x6366f1 });
 const nodeGeo = new THREE.SphereGeometry(0.18, 6, 6);
-const pinkMat = new THREE.MeshBasicMaterial({ color: 0xff2d78 });
-const blueMat = new THREE.MeshBasicMaterial({ color: 0x00aaff });
-const palettes = [nodeMat, nodeMat, nodeMat, nodeMat, pinkMat, blueMat];
+const palettes = [navyMat, navyMat, navyMat, blueMat, blueMat, skyMat];
 
 for (let i = 0; i < NODE_COUNT; i++) {
   const mat = palettes[Math.floor(Math.random() * palettes.length)];
@@ -40,7 +41,7 @@ for (let i = 0; i < NODE_COUNT; i++) {
 }
 
 const LINE_PAIRS = [];
-const lineMat = new THREE.LineBasicMaterial({ color: 0x00e5cc, transparent: true, opacity: 0.15 });
+const lineMat = new THREE.LineBasicMaterial({ color: 0x93c5fd, transparent: true, opacity: 0.18 });
 
 for (let i = 0; i < NODE_COUNT; i++) {
   for (let j = i + 1; j < NODE_COUNT; j++) {
@@ -73,10 +74,10 @@ function animate() {
       const lim = ax === 'z' ? 17 : (ax === 'y' ? 22 : 35);
       if (Math.abs(n.mesh.position[ax]) > lim) n.vel[ax] *= -1;
     });
-    const pulse = 0.6 + 0.4 * Math.sin(t * n.pulseSpeed + n.phase);
-    n.mesh.material.opacity = pulse;
+    const pulse = 0.5 + 0.5 * Math.sin(t * n.pulseSpeed + n.phase);
+    n.mesh.material.opacity = 0.3 + 0.5 * pulse;
     n.mesh.material.transparent = true;
-    const s = 0.7 + 0.6 * pulse;
+    const s = 0.7 + 0.5 * pulse;
     n.mesh.scale.setScalar(s);
   });
 
@@ -87,7 +88,7 @@ function animate() {
     const vis = d < CONNECT_DIST;
     line.visible = vis;
     if (vis) {
-      line.material.opacity = (1 - d / CONNECT_DIST) * 0.25;
+      line.material.opacity = (1 - d / CONNECT_DIST) * 0.2;
       const pos = geo.attributes.position;
       pos.setXYZ(0, a.x, a.y, a.z);
       pos.setXYZ(1, b.x, b.y, b.z);

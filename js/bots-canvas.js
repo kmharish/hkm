@@ -5,22 +5,22 @@
   const W = 420, H = 420;
   bc.width = W; bc.height = H;
 
-  const CYAN = '#00e5cc';
-  const PINK = '#ff2d78';
-  const BLUE = '#00aaff';
-  const GOLD = '#f0c040';
+  const NAVY   = '#0f2d6b';
+  const BLUE   = '#1d4ed8';
+  const SKY    = '#3b82f6';
+  const INDIGO = '#6366f1';
 
   // Bot definitions — fixed positions in a network topology
   const bots = [
-    { x: 210, y: 210, r: 22, col: CYAN, label: 'HUB',   type: 'hub'     },
-    { x: 100, y: 100, r: 15, col: CYAN, label: 'DEV-1', type: 'device'  },
-    { x: 330, y: 95,  r: 15, col: BLUE, label: 'DEV-2', type: 'device'  },
-    { x: 355, y: 250, r: 15, col: CYAN, label: 'DEV-3', type: 'device'  },
-    { x: 310, y: 360, r: 15, col: PINK, label: 'DEV-4', type: 'device'  },
-    { x: 130, y: 360, r: 15, col: BLUE, label: 'DEV-5', type: 'device'  },
-    { x: 60,  y: 250, r: 15, col: CYAN, label: 'DEV-6', type: 'device'  },
-    { x: 210, y: 60,  r: 12, col: GOLD, label: 'GW',    type: 'gateway' },
-    { x: 210, y: 370, r: 12, col: GOLD, label: 'GW',    type: 'gateway' },
+    { x: 210, y: 210, r: 22, col: NAVY,   label: 'HUB',   type: 'hub'     },
+    { x: 100, y: 100, r: 15, col: BLUE,   label: 'DEV-1', type: 'device'  },
+    { x: 330, y: 95,  r: 15, col: SKY,    label: 'DEV-2', type: 'device'  },
+    { x: 355, y: 250, r: 15, col: BLUE,   label: 'DEV-3', type: 'device'  },
+    { x: 310, y: 360, r: 15, col: INDIGO, label: 'DEV-4', type: 'device'  },
+    { x: 130, y: 360, r: 15, col: SKY,    label: 'DEV-5', type: 'device'  },
+    { x: 60,  y: 250, r: 15, col: BLUE,   label: 'DEV-6', type: 'device'  },
+    { x: 210, y: 60,  r: 12, col: NAVY,   label: 'GW',    type: 'gateway' },
+    { x: 210, y: 370, r: 12, col: NAVY,   label: 'GW',    type: 'gateway' },
   ];
 
   // Edges between bots
@@ -36,7 +36,7 @@
     edge: e,
     t: Math.random(),
     speed: 0.004 + Math.random() * 0.007,
-    col: [CYAN, PINK, BLUE, GOLD][i % 4],
+    col: [BLUE, INDIGO, SKY, NAVY][i % 4],
     dir: Math.random() > 0.5 ? 1 : -1,
     active: Math.random() > 0.35,
   }));
@@ -61,7 +61,7 @@
     if (b.type === 'hub') {
       // Outer glow ring
       const g = ctx.createRadialGradient(b.x, b.y, b.r * 0.5, b.x, b.y, b.r * 2.5);
-      g.addColorStop(0, b.col + '55');
+      g.addColorStop(0, b.col + '33');
       g.addColorStop(1, b.col + '00');
       ctx.beginPath();
       ctx.arc(b.x, b.y, b.r * 2.5, 0, Math.PI * 2);
@@ -81,7 +81,7 @@
       ctx.closePath();
       ctx.strokeStyle = b.col;
       ctx.lineWidth = 2.5;
-      ctx.globalAlpha = 0.9;
+      ctx.globalAlpha = 0.85;
       ctx.stroke();
       ctx.fillStyle = b.col + '18';
       ctx.fill();
@@ -101,11 +101,11 @@
       ctx.lineTo(b.x + 8, b.y - b.r - 22);
       ctx.strokeStyle = b.col;
       ctx.lineWidth = 1.5;
-      ctx.globalAlpha = 0.7;
+      ctx.globalAlpha = 0.6;
       ctx.stroke();
       ctx.beginPath();
       ctx.arc(b.x + 8, b.y - b.r - 22, 3, 0, Math.PI * 2);
-      ctx.fillStyle = PINK;
+      ctx.fillStyle = INDIGO;
       ctx.globalAlpha = 0.5 + 0.5 * Math.sin(t * 4);
       ctx.fill();
 
@@ -120,7 +120,7 @@
       ctx.closePath();
       ctx.strokeStyle = b.col;
       ctx.lineWidth = 2;
-      ctx.globalAlpha = 0.85;
+      ctx.globalAlpha = 0.8;
       ctx.stroke();
       ctx.fillStyle = b.col + '22';
       ctx.fill();
@@ -137,14 +137,14 @@
       ctx.roundRect(-s * 0.75, -s * 0.55, s * 1.5, s * 1.1, 3);
       ctx.strokeStyle = b.col;
       ctx.lineWidth = 1.8;
-      ctx.globalAlpha = 0.85 * pulse;
+      ctx.globalAlpha = 0.8 * pulse;
       ctx.stroke();
       ctx.fillStyle = b.col + '14';
       ctx.fill();
 
       // Screen (tiny rect inside)
-      ctx.fillStyle = b.col + '55';
-      ctx.globalAlpha = pulse * 0.7;
+      ctx.fillStyle = b.col + '44';
+      ctx.globalAlpha = pulse * 0.65;
       ctx.fillRect(-s * 0.42, -s * 0.35, s * 0.84, s * 0.5);
 
       // Antenna
@@ -153,7 +153,7 @@
       ctx.lineTo(0, -s * 1.2);
       ctx.strokeStyle = b.col;
       ctx.lineWidth = 1.2;
-      ctx.globalAlpha = 0.55;
+      ctx.globalAlpha = 0.5;
       ctx.stroke();
       // Antenna tip blink
       ctx.beginPath();
@@ -168,9 +168,9 @@
     ctx.globalAlpha = 1;
 
     // Label
-    ctx.font = `bold 9px 'Share Tech Mono', monospace`;
+    ctx.font = `bold 9px 'Inter', sans-serif`;
     ctx.fillStyle = b.col;
-    ctx.globalAlpha = 0.65;
+    ctx.globalAlpha = 0.55;
     ctx.textAlign = 'center';
     ctx.fillText(b.label, b.x, b.y + b.r + 13);
     ctx.globalAlpha = 1;
@@ -181,9 +181,9 @@
     const t = ts / 1000;
     ctx.clearRect(0, 0, W, H);
 
-    // Background grid dots
-    ctx.globalAlpha = 0.06;
-    ctx.fillStyle = CYAN;
+    // Background grid dots (very subtle on light bg)
+    ctx.globalAlpha = 0.07;
+    ctx.fillStyle = BLUE;
     for (let gx = 20; gx < W; gx += 35) {
       for (let gy = 20; gy < H; gy += 35) {
         ctx.beginPath();
@@ -197,14 +197,14 @@
     edges.forEach(([a, b]) => {
       const ba = bots[a], bb = bots[b];
       const grd = ctx.createLinearGradient(ba.x, ba.y, bb.x, bb.y);
-      grd.addColorStop(0, ba.col + '55');
-      grd.addColorStop(1, bb.col + '55');
+      grd.addColorStop(0, ba.col + '44');
+      grd.addColorStop(1, bb.col + '44');
       ctx.beginPath();
       ctx.moveTo(ba.x, ba.y);
       ctx.lineTo(bb.x, bb.y);
       ctx.strokeStyle = grd;
       ctx.lineWidth = 1;
-      ctx.globalAlpha = 0.35;
+      ctx.globalAlpha = 0.4;
       ctx.setLineDash([4, 6]);
       ctx.stroke();
       ctx.setLineDash([]);
@@ -213,7 +213,7 @@
     // Draw pulse rings
     pulses.forEach((p, i) => {
       p.timer--;
-      if (p.timer <= 0) { p.r = 0; p.alpha = 0.8; p.timer = 80 + Math.random() * 120; }
+      if (p.timer <= 0) { p.r = 0; p.alpha = 0.7; p.timer = 80 + Math.random() * 120; }
       if (p.alpha > 0) {
         p.r  += 1.2;
         p.alpha -= 0.013;
@@ -240,16 +240,16 @@
       ctx.beginPath();
       ctx.arc(px, py, 3.5, 0, Math.PI * 2);
       ctx.fillStyle = pk.col;
-      ctx.globalAlpha = 0.9;
+      ctx.globalAlpha = 0.85;
       ctx.fill();
       // glow
       const g2 = ctx.createRadialGradient(px, py, 0, px, py, 9);
-      g2.addColorStop(0, pk.col + 'aa');
+      g2.addColorStop(0, pk.col + '88');
       g2.addColorStop(1, pk.col + '00');
       ctx.beginPath();
       ctx.arc(px, py, 9, 0, Math.PI * 2);
       ctx.fillStyle = g2;
-      ctx.globalAlpha = 0.55;
+      ctx.globalAlpha = 0.4;
       ctx.fill();
       ctx.globalAlpha = 1;
     });
@@ -270,7 +270,7 @@
       ctx.save();
       ctx.globalAlpha = bub.alpha * 0.9;
       // bubble bg
-      ctx.fillStyle = '#04080f';
+      ctx.fillStyle = '#ffffff';
       ctx.strokeStyle = bot.col;
       ctx.lineWidth = 1;
       const tw = ctx.measureText(bub.msg).width + 12;
@@ -284,12 +284,12 @@
       ctx.lineTo(bx - 5, by + 8);
       ctx.lineTo(bx + 4, by + 5);
       ctx.closePath();
-      ctx.fillStyle = '#04080f';
+      ctx.fillStyle = '#ffffff';
       ctx.fill();
       ctx.strokeStyle = bot.col;
       ctx.stroke();
       // text
-      ctx.font = `8px 'Share Tech Mono', monospace`;
+      ctx.font = `bold 8px 'Inter', sans-serif`;
       ctx.fillStyle = bot.col;
       ctx.textAlign = 'left';
       ctx.fillText(bub.msg, bx + 6, by + 1);
