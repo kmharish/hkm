@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harish Kakubal Math · Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<canvas id="hero-canvas"></canvas>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">HKM.DEV</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-tag">// PORTFOLIO SYSTEM INITIALIZED</div>
+    <h1 class="hero-name">HARISH<br><span>KAKUBAL MATH</span></h1>
+    <div class="hero-subtitle">
+      &gt; <span class="typed-wrap"><span id="typed"></span></span><span class="cursor">_</span>
+    </div>
+    <p class="hero-desc">
+      9 years building backend systems across IoT and e-commerce domains.
+      Currently focused on cloud-native firmware distribution infrastructure managing
+      3 million+ connected devices on GCP.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Connect</a>
+    </div>
+  </div>
+  <div class="hero-status">
+    <div class="status-dot-wrap"><div class="sdot"></div>SYSTEMS ONLINE</div>
+    <div class="status-dot-wrap"><div class="sdot p"></div>BANGALORE, INDIA</div>
+    <div class="status-dot-wrap"><div class="sdot b"></div>OPEN TO OPPORTUNITIES</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="s-label">01 // ABOUT</div>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2 class="s-title">The Engineer<br>Behind the Nodes</h2>
+      <p>I'm a <strong>Software Engineer with 9 years of experience</strong> across IoT and e-commerce domains. Currently working as Associate Technical Lead at ThoughtFocus, Bangalore.</p>
+      <p>My primary focus is <strong>IoT connected device infrastructure</strong> — building and maintaining the backend systems that manage firmware lifecycle for 3 million+ devices globally. This includes cloud-native microservices on GCP, distributed messaging with Spring Cloud Stream, and identity management with Keycloak.</p>
+      <p>Prior to IoT work, I built microservices for GenAlpha's <strong><a href="https://www.genalpha.com/equip360" class="c-val" target="_blank">Equip360</a></strong> — a B2B e-commerce platform that equips users with tools for product configuration, warranty and RMA management, eCommerce, 2D and 3D commerce-enabled bill of materials catalogs, and data analysis, all designed to improve customer experience and boost online profitability.</p>
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="stat-n">9+</div>
+          <div class="stat-l">Years Engineering</div>
+        </div>
+        <!-- <div class="stat-box">
+          <div class="stat-n">3M+</div>
+          <div class="stat-l">Devices Managed</div>
+        </div> -->
+        <div class="stat-box">
+          <div class="stat-n">2</div>
+          <div class="stat-l">Industry Domains</div>
+        </div>
+        <!-- <div class="stat-box">
+          <div class="stat-n">2×</div>
+          <div class="stat-l">Star Performer Award</div>
+        </div> -->
+      </div>
+    </div>
+    <div>
+      <!-- Animated IoT Bots Network -->
+      <canvas id="bots-canvas" width="420" height="420" style="width:100%;max-width:420px;display:block;margin:0 auto;"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="s-label">02 // SKILLS</div>
+  <h2 class="s-title">Tech Stack</h2>
+  <div class="skills-grid">
+    <div class="skill-cat">Languages</div>
+    <div class="sk"><div class="sk-icon">☕</div><div class="sk-name">Java 21+</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div></div>
+    <div class="sk"><div class="sk-icon">🐍</div><div class="sk-name">Python</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">🗃️</div><div class="sk-name">SQL</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+
+    <div class="skill-cat">Frameworks &amp; Tools</div>
+    <div class="sk"><div class="sk-icon">🌿</div><div class="sk-name">Spring Boot</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div></div>
+    <div class="sk"><div class="sk-icon">⚡</div><div class="sk-name">Spring Cloud</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">🔗</div><div class="sk-name">Spring Data JPA</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">⚡</div><div class="sk-name">Redis</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">🔄</div><div class="sk-name">Infinispan</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
+
+    <div class="skill-cat">Observability &amp; Monitoring</div>
+    <div class="sk"><div class="sk-icon">📊</div><div class="sk-name">Prometheus</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">📈</div><div class="sk-name">Grafana</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">📋</div><div class="sk-name">Loki</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">🔬</div><div class="sk-name">Micrometer</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+
+    <div class="skill-cat">CI/CD &amp; Infrastructure</div>
+    <div class="sk"><div class="sk-icon">🐳</div><div class="sk-name">Docker</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">⎈</div><div class="sk-name">Kubernetes</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">🚀</div><div class="sk-name">ArgoCD</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">⚙️</div><div class="sk-name">Jenkins</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">📦</div><div class="sk-name">Helm Charts</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
+    <div class="sk"><div class="sk-icon">🔀</div><div class="sk-name">Git</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="s-label">03 // PROJECTS</div>
+  <h2 class="s-title">Featured Work</h2>
+  <div class="projects-grid">
+
+    <div class="proj">
+      <div class="proj-num">PROJECT_001 · IoT</div>
+      <div class="proj-title">OTA Firmware Update Service</div>
+      <p class="proj-desc">
+        Part of the team that designed and built a cloud-native OTA (Over-the-Air) update microservice managing firmware OTA updates for over 3+ million IoT devices globally. The service handles firmware image pooling, versioned bundle management, and rule-based release targeting — orchestrating updates across a large heterogeneous device fleet on GCP. A key area of focus has been observability: the service exposes real-time health and throughput metrics via Micrometer and Prometheus, with Grafana dashboards providing visibility into update pipeline status, message delivery health, and system availability at scale.
+      </p>
+      <div class="proj-tags">
+        <span class="tag">Spring Boot</span><span class="tag">Java</span>
+        <span class="tag">GCP PubSub</span><span class="tag">Redis</span>
+        <span class="tag">Micrometer</span><span class="tag">Prometheus</span>
+        <span class="tag">Grafana</span><span class="tag">Kubernetes</span>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-num">PROJECT_002 · IoT</div>
+      <div class="proj-title">Centralized Device Management Tool</div>
+      <p class="proj-desc">
+        Built a centralized tool for managing IoT device simulations used in large-scale automated testing. Provides real-time monitoring and control of simulated devices, configurable launch options, integrated health and status reporting, and log access. Delivered as a web-based dashboard integrated with automation frameworks.
+      </p>
+      <div class="proj-tags">
+        <span class="tag">Spring Boot</span><span class="tag">Web Dashboard</span>
+        <span class="tag">IoT Simulation</span><span class="tag">Test Automation</span>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-num">PROJECT_003 · IoT</div>
+      <div class="proj-title">IoT CRM Tool</div>
+      <p class="proj-desc">
+        Developed a CRM tool for managing IoT devices and accessing event histories to support issue resolution. Integrated RSocket and WebSocket for real-time data transfer between the CRM and IoT Edge Services. Configured multi-environment deployment with Docker and implemented permission-based access for data privacy compliance.
+      </p>
+      <div class="proj-tags">
+        <span class="tag">Spring Boot</span><span class="tag">RSocket</span>
+        <span class="tag">WebSocket</span><span class="tag">Docker</span>
+        <span class="tag">Multi-env</span>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-num">PROJECT_004 · IoT</div>
+      <div class="proj-title">Notification Template Manager</div>
+      <p class="proj-desc">
+        Built a template management system for device notifications, standardizing content across device classes. Includes a web-based interface for template creation, editing, and previewing. Uses a FreeMarker-based Java library for flexible template retrieval and supports bulk operations with secure storage.
+      </p>
+      <div class="proj-tags">
+        <span class="tag">Spring Boot</span><span class="tag">FreeMarker</span>
+        <span class="tag">Template Engine</span><span class="tag">IoT</span>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-num">PROJECT_005 · GENALPHA / E-COMMERCE</div>
+      <div class="proj-title">B2B eCommerce Platform</div>
+      <p class="proj-desc">
+        Worked on Equip360, a B2B eCommerce platform that equips users with tools for product configuration, warranty and RMA management, eCommerce, 2D and 3D commerce-enabled bill of materials catalogs, and data analysis — all designed to improve customer experience and boost online profitability. Implemented workflows for RMA, Warranty, and Service Bulletins. Maintained code quality via SonarQube and contributed to CI/CD pipeline setup.
+      </p>
+      <div class="proj-tags">
+        <span class="tag">Spring Boot</span><span class="tag">Multi-tenant</span>
+        <span class="tag">30+ Languages</span><span class="tag">CI/CD</span>
+        <span class="tag">SonarQube</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="s-label">04 // EXPERIENCE</div>
+  <h2 class="s-title">Career Timeline</h2>
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-period">NOV 2021 — PRESENT</div>
+      <div class="tl-role">Associate Technical Lead</div>
+      <div class="tl-company">ThoughtFocus Ltd · Bangalore</div>
+      <ul class="tl-bullets">
+        <li><strong style="color:var(--text)">IoT / Connected Devices (Jul 2022 – Present):</strong> Part of team building and maintaining cloud-native microservices for IoT firmware lifecycle management across 2M+ devices on GCP. Focused on distributed state management, event-driven messaging pipelines, observability with Micrometer/Prometheus/Grafana, and CI/CD via ArgoCD and Kubernetes.</li>
+        <li><strong style="color:var(--text)">GenAlpha (Nov 2021 – Jun 2022) · E-commerce / Manufacturing:</strong> Developed features on Equip360, a B2B eCommerce platform providing product configuration, warranty and RMA management, 2D/3D commerce-enabled BOM catalogs, and data analysis tools to improve customer experience and online profitability. Implemented RMA, Warranty, and Service Bulletin workflows. Contributed to CI/CD pipelines and code quality practices using SonarQube.</li>
+      </ul>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-period">NOV 2016 — NOV 2021</div>
+      <div class="tl-role">Senior Software Engineer</div>
+      <div class="tl-company">Accenture Services Pvt Ltd · Bangalore</div>
+      <ul class="tl-bullets">
+        <li>Backend Java developer on an insurance Agency Management System (AMS) — the central data store for external agencies, agents, and brokers, integrating with 15+ downstream systems including policy issuance, claims, billing, and document management.</li>
+        <li>Developed and maintained microservices and REST APIs on IBM DB2. Addressed SonarQube code quality issues and assisted in CI/CD pipeline setup for new applications.</li>
+        <li>Handled change requests end-to-end: design, implementation, backout planning, QA/UAT coordination, and representation at weekly Change Advisory Board meetings.</li>
+        <li>Recognised with Accenture Celebrates Excellence (ACE) award, Q4 2017.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="s-label">05 // CONTACT</div>
+  <div class="contact-wrap">
+    <h2 class="s-title">Open a Channel</h2>
+    <p class="contact-intro">
+      I'm always interested in discussing IoT systems, distributed architectures,
+      cloud-native migrations, or anything that involves making devices talk to each other.
+      Drop me a line — I'll respond when the cron job fires.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:harishkakubalmath@gmail.com" class="c-link">
+        <div class="c-icon">✉</div>
+        <div class="c-label">Email</div>
+        <div class="c-val">harishkakubalmath@gmail.com</div>
+      </a>
+      <a href="https://www.linkedin.com/in/harish-km" class="c-link" target="_blank">
+        <div class="c-icon">⬡</div>
+        <div class="c-label">LinkedIn</div>
+        <div class="c-val">linkedin.com/in/harish-km</div>
+      </a>
+      <a href="tel:+919738052511" class="c-link">
+        <div class="c-icon">◈</div>
+        <div class="c-label">Phone</div>
+        <div class="c-val">+91 97380 52511</div>
+      </a>
+      <a href="#" class="c-link">
+        <div class="c-icon">📄</div>
+        <div class="c-label">Resume</div>
+        <div class="c-val">Download PDF</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">© 2026 <span><a href="https://www.linkedin.com/in/harish-km" class="c-val" target="_blank">HARISH KAKUBAL MATH</a></span> </div>
+  <div class="ft">BUILT WITH <span>THREE.JS</span> + <span>GSAP</span> + CAFFEINE</div>
+</footer>
+
+<script src="js/three-scene.js"></script>
+<script src="js/bots-canvas.js"></script>
+<script src="js/typewriter.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>
