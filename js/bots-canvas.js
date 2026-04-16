@@ -1,26 +1,26 @@
-// ─── IoT BOTS CANVAS (About Section) ─────────────────────────────
+// ─── IoT BOTS CANVAS (About Section) — Warm Palette ──────────────
 (function () {
   const bc = document.getElementById('bots-canvas');
   const ctx = bc.getContext('2d');
   const W = 420, H = 420;
   bc.width = W; bc.height = H;
 
-  const NAVY   = '#0f2d6b';
-  const BLUE   = '#1d4ed8';
-  const SKY    = '#3b82f6';
-  const INDIGO = '#6366f1';
+  const TERRACOTTA = '#c96442';
+  const CORAL      = '#d97757';
+  const STONE      = '#87867f';
+  const CHARCOAL   = '#4d4c48';
 
   // Bot definitions — fixed positions in a network topology
   const bots = [
-    { x: 210, y: 210, r: 22, col: NAVY,   label: '',   type: 'hub'     },
-    { x: 100, y: 100, r: 15, col: BLUE,   label: '', type: 'device'  },
-    { x: 330, y: 95,  r: 15, col: SKY,    label: '', type: 'device'  },
-    { x: 355, y: 250, r: 15, col: BLUE,   label: '', type: 'device'  },
-    { x: 310, y: 360, r: 15, col: INDIGO, label: '', type: 'device'  },
-    { x: 130, y: 360, r: 15, col: SKY,    label: '', type: 'device'  },
-    { x: 60,  y: 250, r: 15, col: BLUE,   label: '', type: 'device'  },
-    { x: 210, y: 60,  r: 12, col: NAVY,   label: '',    type: 'gateway' },
-    { x: 210, y: 370, r: 12, col: NAVY,   label: '',    type: 'gateway' },
+    { x: 210, y: 210, r: 22, col: TERRACOTTA, label: '', type: 'hub'     },
+    { x: 100, y: 100, r: 15, col: CORAL,      label: '', type: 'device'  },
+    { x: 330, y: 95,  r: 15, col: STONE,      label: '', type: 'device'  },
+    { x: 355, y: 250, r: 15, col: CORAL,      label: '', type: 'device'  },
+    { x: 310, y: 360, r: 15, col: CHARCOAL,   label: '', type: 'device'  },
+    { x: 130, y: 360, r: 15, col: STONE,      label: '', type: 'device'  },
+    { x: 60,  y: 250, r: 15, col: CORAL,      label: '', type: 'device'  },
+    { x: 210, y: 60,  r: 12, col: TERRACOTTA, label: '', type: 'gateway' },
+    { x: 210, y: 370, r: 12, col: TERRACOTTA, label: '', type: 'gateway' },
   ];
 
   // Edges between bots
@@ -36,7 +36,7 @@
     edge: e,
     t: Math.random(),
     speed: 0.004 + Math.random() * 0.007,
-    col: [BLUE, INDIGO, SKY, NAVY][i % 4],
+    col: [CORAL, CHARCOAL, STONE, TERRACOTTA][i % 4],
     dir: Math.random() > 0.5 ? 1 : -1,
     active: Math.random() > 0.35,
   }));
@@ -105,7 +105,7 @@
       ctx.stroke();
       ctx.beginPath();
       ctx.arc(b.x + 8, b.y - b.r - 22, 3, 0, Math.PI * 2);
-      ctx.fillStyle = INDIGO;
+      ctx.fillStyle = STONE;
       ctx.globalAlpha = 0.5 + 0.5 * Math.sin(t * 4);
       ctx.fill();
 
@@ -181,9 +181,9 @@
     const t = ts / 1000;
     ctx.clearRect(0, 0, W, H);
 
-    // Background grid dots (very subtle on light bg)
-    ctx.globalAlpha = 0.07;
-    ctx.fillStyle = BLUE;
+    // Background grid dots
+    ctx.globalAlpha = 0.06;
+    ctx.fillStyle = TERRACOTTA;
     for (let gx = 20; gx < W; gx += 35) {
       for (let gy = 20; gy < H; gy += 35) {
         ctx.beginPath();
@@ -269,8 +269,8 @@
       const by = bot.y - bot.r - 8;
       ctx.save();
       ctx.globalAlpha = bub.alpha * 0.9;
-      // bubble bg
-      ctx.fillStyle = '#ffffff';
+      // bubble bg — dark for contrast on parchment
+      ctx.fillStyle = '#141413';
       ctx.strokeStyle = bot.col;
       ctx.lineWidth = 1;
       const tw = ctx.measureText(bub.msg).width + 12;
@@ -284,7 +284,7 @@
       ctx.lineTo(bx - 5, by + 8);
       ctx.lineTo(bx + 4, by + 5);
       ctx.closePath();
-      ctx.fillStyle = '#ffffff';
+      ctx.fillStyle = '#141413';
       ctx.fill();
       ctx.strokeStyle = bot.col;
       ctx.stroke();
