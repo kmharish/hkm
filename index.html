@@ -1,277 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harish Kakubal Math · Software Engineer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harish Kakubal Math · Backend Engineer</title>
+  <meta name="description" content="Harish Kakubal Math — backend engineer with 9+ years building event-driven infrastructure across IoT, e-commerce, and financial services. Firmware delivery to 5M+ connected devices on GCP." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-
-<canvas id="hero-canvas"></canvas>
+<div style="overflow-x:hidden">
 
 <!-- NAV -->
-<nav id="navbar">
-  <div class="nav-logo">HKM.DEV</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;background:rgba(244,243,238,0.82);backdrop-filter:blur(10px);border-bottom:1px solid #e4e2da">
+  <div style="display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-0.02em;font-size:18px">
+    <span style="display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;border:1.5px solid #15171c;border-radius:6px;font-size:11px">H</span>
+    Harish K M
+  </div>
+  <div class="nav-menu" style="display:flex;align-items:center;gap:30px;font-size:14px;font-weight:500">
+    <a href="#about" class="nav-link" style="color:#5d626c">About</a>
+    <a href="#stack" class="nav-link" style="color:#5d626c">Stack</a>
+    <a href="#work" class="nav-link" style="color:#5d626c">Work</a>
+    <a href="#timeline" class="nav-link" style="color:#5d626c">Experience</a>
+    <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:#15171c;color:#fff;border-radius:999px">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-content">
-    <div class="hero-tag">// PORTFOLIO</div>
-    <h1 class="hero-name">HARISH<br><span>KAKUBAL MATH</span></h1>
-    <div class="hero-subtitle">
-      &gt; <span class="typed-wrap"><span id="typed"></span></span><span class="cursor">_</span>
+<section class="hero-grid" style="max-width:1200px;margin:0 auto;padding:72px 40px 40px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center">
+  <div data-reveal class="reveal">
+    <div style="display:inline-flex;align-items:center;gap:9px;padding:6px 13px;border:1px solid #d8d6cd;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:0.04em;color:#5d626c;margin-bottom:26px">
+      <span style="width:7px;height:7px;border-radius:50%;background:#15b86b;animation:blink 1.6s infinite"></span>
+      OPEN TO OPPORTUNITIES · BANGALORE
     </div>
-    <p class="hero-desc">
-      9 years building backend systems across IoT and e-commerce domains.
-      Currently focused on cloud-native firmware distribution infrastructure managing
-      3 million+ connected devices on GCP.
+    <h1 class="hero-title" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:62px;line-height:0.98;letter-spacing:-0.035em;margin-bottom:22px">
+      Backend engineer<br>for systems that<br><span style="color:#2b4cff">never stop talking.</span>
+    </h1>
+    <p style="font-size:18px;line-height:1.6;color:#4a4f59;max-width:520px;margin-bottom:32px">
+      9+ years building event-driven backend infrastructure across IoT, e-commerce, and financial services. Today I keep firmware flowing to <strong style="color:#15171c">5M+ connected devices</strong> on GCP, cloud-native services, distributed messaging, and the observability that proves it all works.
     </p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="#contact" class="btn btn-outline">Connect</a>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="#work" style="display:inline-flex;align-items:center;gap:9px;padding:14px 24px;background:#2b4cff;color:#fff;border-radius:999px;font-weight:600;font-size:15px">View selected work →</a>
+      <a href="assets.pdf" download="Harish_Kakubal_Math_Resume.pdf" style="display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border:1px solid #cfcdc4;border-radius:999px;font-weight:600;font-size:15px">Download résumé</a>
     </div>
   </div>
-  <div class="hero-status">
-    <div class="status-dot-wrap"><div class="sdot"></div>SYSTEMS ONLINE</div>
-    <div class="status-dot-wrap"><div class="sdot p"></div>BANGALORE, INDIA</div>
-    <div class="status-dot-wrap"><div class="sdot b"></div>OPEN TO OPPORTUNITIES</div>
+
+  <!-- AMBIENT MESH (motif, not a dashboard) -->
+  <div data-reveal class="reveal">
+    <div style="position:relative;padding:8px 0">
+      <svg viewBox="0 0 540 360" style="width:100%;display:block;overflow:visible">
+        <!-- edges device->bus -->
+        <path d="M120,80 C190,80 200,160 250,170" fill="none" stroke="#dfe3ef" stroke-width="2"/>
+        <path d="M120,180 C190,180 200,178 250,180" fill="none" stroke="#dfe3ef" stroke-width="2"/>
+        <path d="M120,280 C190,280 200,200 250,192" fill="none" stroke="#dfe3ef" stroke-width="2"/>
+        <!-- animated dash overlay -->
+        <path d="M120,80 C190,80 200,160 250,170" fill="none" stroke="#2b4cff" stroke-width="2" stroke-dasharray="2 7" opacity="0.5" style="animation:dash 1s linear infinite"/>
+        <path d="M120,180 C190,180 200,178 250,180" fill="none" stroke="#2b4cff" stroke-width="2" stroke-dasharray="2 7" opacity="0.5" style="animation:dash 1s linear infinite"/>
+        <path d="M120,280 C190,280 200,200 250,192" fill="none" stroke="#2b4cff" stroke-width="2" stroke-dasharray="2 7" opacity="0.5" style="animation:dash 1s linear infinite"/>
+        <!-- edges bus->service -->
+        <path d="M360,165 C410,150 420,90 470,90" fill="none" stroke="#dfe3ef" stroke-width="2"/>
+        <path d="M360,180 C410,180 420,180 470,180" fill="none" stroke="#dfe3ef" stroke-width="2"/>
+        <path d="M360,195 C410,210 420,270 470,270" fill="none" stroke="#dfe3ef" stroke-width="2"/>
+        <path d="M360,165 C410,150 420,90 470,90" fill="none" stroke="#15b86b" stroke-width="2" stroke-dasharray="2 7" opacity="0.5" style="animation:dash 1s linear infinite"/>
+        <path d="M360,180 C410,180 420,180 470,180" fill="none" stroke="#15b86b" stroke-width="2" stroke-dasharray="2 7" opacity="0.5" style="animation:dash 1s linear infinite"/>
+        <path d="M360,195 C410,210 420,270 470,270" fill="none" stroke="#15b86b" stroke-width="2" stroke-dasharray="2 7" opacity="0.5" style="animation:dash 1s linear infinite"/>
+
+        <!-- packets -->
+        <circle r="4.5" fill="#2b4cff" style="offset-path:path('M120,80 C190,80 200,160 250,170');animation:flow 2.4s linear infinite"/>
+        <circle r="4.5" fill="#2b4cff" style="offset-path:path('M120,180 C190,180 200,178 250,180');animation:flow 2.4s linear infinite .8s"/>
+        <circle r="4.5" fill="#2b4cff" style="offset-path:path('M120,280 C190,280 200,200 250,192');animation:flow 2.4s linear infinite 1.5s"/>
+        <circle r="4.5" fill="#15b86b" style="offset-path:path('M360,165 C410,150 420,90 470,90');animation:flow 2.2s linear infinite .4s"/>
+        <circle r="4.5" fill="#15b86b" style="offset-path:path('M360,180 C410,180 420,180 470,180');animation:flow 2.2s linear infinite 1.1s"/>
+        <circle r="4.5" fill="#15b86b" style="offset-path:path('M360,195 C410,210 420,270 470,270');animation:flow 2.2s linear infinite 1.8s"/>
+
+        <!-- device nodes -->
+        <g style="transform-box:fill-box;transform-origin:center">
+          <circle cx="95" cy="80" r="22" fill="#2b4cff" opacity="0.12" style="transform-box:fill-box;transform-origin:center;animation:pulsering 2.6s ease-out infinite"/>
+          <circle cx="95" cy="180" r="22" fill="#2b4cff" opacity="0.12" style="transform-box:fill-box;transform-origin:center;animation:pulsering 2.6s ease-out infinite .9s"/>
+          <circle cx="95" cy="280" r="22" fill="#2b4cff" opacity="0.12" style="transform-box:fill-box;transform-origin:center;animation:pulsering 2.6s ease-out infinite 1.7s"/>
+        </g>
+        <circle cx="95" cy="80" r="13" fill="#fff" stroke="#2b4cff" stroke-width="2"/>
+        <circle cx="95" cy="180" r="13" fill="#fff" stroke="#2b4cff" stroke-width="2"/>
+        <circle cx="95" cy="280" r="13" fill="#fff" stroke="#2b4cff" stroke-width="2"/>
+        <circle cx="95" cy="80" r="4" fill="#2b4cff"/><circle cx="95" cy="180" r="4" fill="#2b4cff"/><circle cx="95" cy="280" r="4" fill="#2b4cff"/>
+
+        <!-- central hub node -->
+        <circle cx="305" cy="180" r="30" fill="#2b4cff" opacity="0.10" style="transform-box:fill-box;transform-origin:center;animation:pulsering 3s ease-out infinite"/>
+        <circle cx="305" cy="180" r="17" fill="#15171c"/>
+        <circle cx="305" cy="180" r="5.5" fill="#fff"/>
+
+        <!-- service nodes -->
+        <circle cx="487" cy="91" r="13" fill="#fff" stroke="#15b86b" stroke-width="2"/>
+        <circle cx="487" cy="181" r="13" fill="#fff" stroke="#15b86b" stroke-width="2"/>
+        <circle cx="487" cy="271" r="13" fill="#fff" stroke="#15b86b" stroke-width="2"/>
+        <circle cx="487" cy="91" r="4" fill="#15b86b"/><circle cx="487" cy="181" r="4" fill="#15b86b"/><circle cx="487" cy="271" r="4" fill="#15b86b"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<section style="max-width:1200px;margin:24px auto 0;padding:0 40px">
+  <div data-reveal class="reveal stat-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#e4e2da;border:1px solid #e4e2da;border-radius:18px;overflow:hidden">
+    <div style="background:#fbfaf7;padding:28px 26px">
+      <div id="stat-years" data-count-to="9" data-count-suffix="+" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:42px;letter-spacing:-0.03em">0+</div>
+      <div style="font-size:13px;color:#5d626c;font-weight:500;margin-top:4px">Years building backend</div>
+    </div>
+    <div style="background:#fbfaf7;padding:28px 26px">
+      <div id="stat-devices" data-count-to="5" data-count-suffix="M+" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:42px;letter-spacing:-0.03em;color:#2b4cff">0M+</div>
+      <div style="font-size:13px;color:#5d626c;font-weight:500;margin-top:4px">IoT devices in fleet</div>
+    </div>
+    <div style="background:#fbfaf7;padding:28px 26px">
+      <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.02em;line-height:1.1;padding-top:8px">Associate<br>Technical Lead</div>
+      <div style="font-size:13px;color:#5d626c;font-weight:500;margin-top:6px">ThoughtFocus · current</div>
+    </div>
+    <div style="background:#fbfaf7;padding:28px 26px">
+      <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.02em;line-height:1.1;padding-top:8px">IoT, Commerce<br>&amp; Finance</div>
+      <div style="font-size:13px;color:#5d626c;font-weight:500;margin-top:6px">Three domains, deep</div>
+    </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about">
-  <div class="s-label">01 // ABOUT</div>
-  <div class="about-grid">
-    <div class="about-text">
-      <h2 class="s-title">The Engineer<br>Behind the Nodes</h2>
-      <p>I'm a <strong>Software Engineer with 9 years of experience</strong> across IoT and e-commerce domains. Currently working as Associate Technical Lead at ThoughtFocus, Bangalore.</p>
-      <p>My primary focus is <strong>IoT connected device infrastructure</strong> — building and maintaining the backend systems that manage firmware lifecycle for 3 million+ devices globally. This includes cloud-native microservices on GCP, distributed messaging with Spring Cloud Stream, and identity management with Keycloak.</p>
-      <p>Prior to IoT work, I built microservices for GenAlpha's <strong><a href="https://www.genalpha.com/equip360" class="c-val" target="_blank">Equip360</a></strong> — a B2B e-commerce platform that equips users with tools for product configuration, warranty and RMA management, eCommerce, 2D and 3D commerce-enabled bill of materials catalogs, and data analysis, all designed to improve customer experience and boost online profitability.</p>
-      <div class="about-stats">
-        <div class="stat-box">
-          <div class="stat-n">9+</div>
-          <div class="stat-l">Years Engineering</div>
-        </div>
-        <!-- <div class="stat-box">
-          <div class="stat-n">3M+</div>
-          <div class="stat-l">Devices Managed</div>
-        </div> -->
-        <div class="stat-box">
-          <div class="stat-n">2</div>
-          <div class="stat-l">Industry Domains</div>
-        </div>
-        <!-- <div class="stat-box">
-          <div class="stat-n">2×</div>
-          <div class="stat-l">Star Performer Award</div>
-        </div> -->
-      </div>
-    </div>
+<section id="about" style="max-width:1200px;margin:0 auto;padding:96px 40px 40px">
+  <div data-reveal class="reveal about-grid" style="display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px">
     <div>
-      <!-- Animated IoT Bots Network -->
-      <canvas id="bots-canvas" width="420" height="420" style="width:100%;max-width:420px;display:block;margin:0 auto;"></canvas>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.14em;color:#2b4cff;margin-bottom:18px">01 · ABOUT</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:38px;line-height:1.05;letter-spacing:-0.03em">The engineer behind the nodes</h2>
+    </div>
+    <div style="font-size:17px;line-height:1.65;color:#4a4f59;display:flex;flex-direction:column;gap:18px;max-width:620px">
+      <p>I'm a software engineer with <strong style="color:#15171c">9+ years of experience</strong> across IoT, e-commerce, and financial services. Currently Associate Technical Lead at ThoughtFocus, Bangalore.</p>
+      <p>My focus is <strong style="color:#15171c">IoT connected-device infrastructure</strong>, the backend that manages firmware lifecycle for millions of devices globally: cloud-native microservices on GCP, distributed messaging with Spring Cloud Stream, and identity with Keycloak.</p>
+      <p>Before IoT, I built microservices for <a href="https://www.genalpha.com/equip360" target="_blank" style="color:#2b4cff;border-bottom:1px solid #b9c2ff">Equip360</a>, a B2B e-commerce platform for product configuration, warranty/RMA management, 2D/3D commerce-enabled BOM catalogs, and analytics.</p>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
-  <div class="s-label">02 // SKILLS</div>
-  <h2 class="s-title">Tech Stack</h2>
-  <div class="skills-grid">
-    <div class="skill-cat">Languages</div>
-    <div class="sk"><div class="sk-icon">☕</div><div class="sk-name">Java 21+</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div></div>
-    <div class="sk"><div class="sk-icon">🐍</div><div class="sk-name">Python</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">🗃️</div><div class="sk-name">SQL</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
-
-    <div class="skill-cat">Frameworks &amp; Tools</div>
-    <div class="sk"><div class="sk-icon">🌿</div><div class="sk-name">Spring Boot</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div></div>
-    <div class="sk"><div class="sk-icon">⚡</div><div class="sk-name">Spring Cloud</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">🔗</div><div class="sk-name">Spring Data JPA</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">⚡</div><div class="sk-name">Redis</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">🔄</div><div class="sk-name">Infinispan</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
-
-    <div class="skill-cat">Observability &amp; Monitoring</div>
-    <div class="sk"><div class="sk-icon">📊</div><div class="sk-name">Prometheus</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">📈</div><div class="sk-name">Grafana</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">📋</div><div class="sk-name">Loki</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">🔬</div><div class="sk-name">Micrometer</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
-
-    <div class="skill-cat">CI/CD &amp; Infrastructure</div>
-    <div class="sk"><div class="sk-icon">🐳</div><div class="sk-name">Docker</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">⎈</div><div class="sk-name">Kubernetes</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">🚀</div><div class="sk-name">ArgoCD</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">⚙️</div><div class="sk-name">Jenkins</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">📦</div><div class="sk-name">Helm Charts</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
-    <div class="sk"><div class="sk-icon">🔀</div><div class="sk-name">Git</div><div class="sk-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div></div>
+<section id="stack" style="max-width:1200px;margin:0 auto;padding:64px 40px 40px">
+  <div data-reveal class="reveal">
+    <div style="font-size:12px;font-weight:600;letter-spacing:0.14em;color:#2b4cff;margin-bottom:14px">02 · STACK</div>
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:38px;line-height:1.05;letter-spacing:-0.03em;margin-bottom:40px">What I build with</h2>
   </div>
-</section>
+  <div data-reveal class="reveal stack-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="s-label">03 // PROJECTS</div>
-  <h2 class="s-title">Featured Work</h2>
-  <div class="projects-grid">
-
-    <div class="proj">
-      <div class="proj-num">PROJECT_001 · IoT</div>
-      <div class="proj-title">OTA Firmware Update Service</div>
-      <p class="proj-desc">
-        Part of the team that designed and built a cloud-native OTA (Over-the-Air) update microservice managing firmware OTA updates for over 3+ million IoT devices globally. The service handles firmware image pooling, versioned bundle management, and rule-based release targeting — orchestrating updates across a large heterogeneous device fleet on GCP. A key area of focus has been observability: the service exposes real-time health and throughput metrics via Micrometer and Prometheus, with Grafana dashboards providing visibility into update pipeline status, message delivery health, and system availability at scale.
-      </p>
-      <div class="proj-tags">
-        <span class="tag">Spring Boot</span><span class="tag">Java</span>
-        <span class="tag">GCP PubSub</span><span class="tag">Redis</span>
-        <span class="tag">Micrometer</span><span class="tag">Prometheus</span>
-        <span class="tag">Grafana</span><span class="tag">Kubernetes</span>
-      </div>
+    <div>
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:#15171c;padding-bottom:12px;border-bottom:2px solid #15171c;margin-bottom:16px">LANGUAGES</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Java 21+</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#15b86b;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#15b86b;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#15b86b;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#15b86b;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#15b86b;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Python</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">SQL</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
     </div>
 
-    <div class="proj">
-      <div class="proj-num">PROJECT_002 · IoT</div>
-      <div class="proj-title">Centralized Device Management Tool</div>
-      <p class="proj-desc">
-        Built a centralized tool for managing IoT device simulations used in large-scale automated testing. Provides real-time monitoring and control of simulated devices, configurable launch options, integrated health and status reporting, and log access. Delivered as a web-based dashboard integrated with automation frameworks.
-      </p>
-      <div class="proj-tags">
-        <span class="tag">Spring Boot</span><span class="tag">Web Dashboard</span>
-        <span class="tag">IoT Simulation</span><span class="tag">Test Automation</span>
-      </div>
+    <div>
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:#15171c;padding-bottom:12px;border-bottom:2px solid #15171c;margin-bottom:16px">FRAMEWORKS</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Spring Boot</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#15b86b;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#15b86b;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#15b86b;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#15b86b;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#15b86b;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Spring Cloud Stream</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Spring Data JPA</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Redis</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Infinispan</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Keycloak</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
     </div>
 
-    <div class="proj">
-      <div class="proj-num">PROJECT_003 · IoT</div>
-      <div class="proj-title">IoT CRM Tool</div>
-      <p class="proj-desc">
-        Developed a CRM tool for managing IoT devices and accessing event histories to support issue resolution. Integrated RSocket and WebSocket for real-time data transfer between the CRM and IoT Edge Services. Configured multi-environment deployment with Docker and implemented permission-based access for data privacy compliance.
-      </p>
-      <div class="proj-tags">
-        <span class="tag">Spring Boot</span><span class="tag">RSocket</span>
-        <span class="tag">WebSocket</span><span class="tag">Docker</span>
-        <span class="tag">Multi-env</span>
-      </div>
+    <div>
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:#15171c;padding-bottom:12px;border-bottom:2px solid #15171c;margin-bottom:16px">OBSERVABILITY</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Prometheus</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Grafana</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Micrometer</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Loki</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
     </div>
 
-    <div class="proj">
-      <div class="proj-num">PROJECT_004 · IoT</div>
-      <div class="proj-title">Notification Template Manager</div>
-      <p class="proj-desc">
-        Built a template management system for device notifications, standardizing content across device classes. Includes a web-based interface for template creation, editing, and previewing. Uses a FreeMarker-based Java library for flexible template retrieval and supports bulk operations with secure storage.
-      </p>
-      <div class="proj-tags">
-        <span class="tag">Spring Boot</span><span class="tag">FreeMarker</span>
-        <span class="tag">Template Engine</span><span class="tag">IoT</span>
-      </div>
-    </div>
-
-    <div class="proj">
-      <div class="proj-num">PROJECT_005 · GENALPHA / E-COMMERCE</div>
-      <div class="proj-title">B2B eCommerce Platform</div>
-      <p class="proj-desc">
-        Worked on Equip360, a B2B eCommerce platform that equips users with tools for product configuration, warranty and RMA management, eCommerce, 2D and 3D commerce-enabled bill of materials catalogs, and data analysis — all designed to improve customer experience and boost online profitability. Implemented workflows for RMA, Warranty, and Service Bulletins. Maintained code quality via SonarQube and contributed to CI/CD pipeline setup.
-      </p>
-      <div class="proj-tags">
-        <span class="tag">Spring Boot</span><span class="tag">Multi-tenant</span>
-        <span class="tag">30+ Languages</span><span class="tag">CI/CD</span>
-        <span class="tag">SonarQube</span>
-      </div>
+    <div>
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:#15171c;padding-bottom:12px;border-bottom:2px solid #15171c;margin-bottom:16px">CI/CD &amp; INFRA</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Docker</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Kubernetes</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">ArgoCD</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Jenkins</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">Helm</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #e7e5dd"><span style="font-size:14.5px;font-weight:500;color:#33373f">GCP PubSub</span><span style="display:flex;gap:3px"><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#2b4cff;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#d8d6cd;display:block"></i></span></div>
     </div>
 
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="s-label">04 // EXPERIENCE</div>
-  <h2 class="s-title">Career Timeline</h2>
-  <div class="timeline">
+<!-- PROJECTS -->
+<section id="work" style="max-width:1200px;margin:0 auto;padding:80px 40px 40px">
+  <div data-reveal class="reveal work-head" style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:16px">
+    <div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.14em;color:#2b4cff;margin-bottom:14px">03 · SELECTED WORK</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:38px;line-height:1.05;letter-spacing:-0.03em">Five things I shipped</h2>
+    </div>
+    <div style="font-size:14px;color:#5d626c;max-width:300px">Backend services across firmware delivery, device management, and B2B commerce.</div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:18px">
 
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-period">NOV 2021 — PRESENT</div>
-      <div class="tl-role">Associate Technical Lead</div>
-      <div class="tl-company">ThoughtFocus Ltd · Bangalore</div>
-      <ul class="tl-bullets">
-        <li><strong style="color:var(--text)">IoT / Connected Devices (Jul 2022 – Present):</strong> Part of team building and maintaining cloud-native microservices for IoT firmware lifecycle management across 2M+ devices on GCP. Focused on distributed state management, event-driven messaging pipelines, observability with Micrometer/Prometheus/Grafana, and CI/CD via ArgoCD and Kubernetes.</li>
-        <li><strong style="color:var(--text)">GenAlpha (Nov 2021 – Jun 2022) · E-commerce / Manufacturing:</strong> Developed features on Equip360, a B2B eCommerce platform providing product configuration, warranty and RMA management, 2D/3D commerce-enabled BOM catalogs, and data analysis tools to improve customer experience and online profitability. Implemented RMA, Warranty, and Service Bulletin workflows. Contributed to CI/CD pipelines and code quality practices using SonarQube.</li>
-      </ul>
+    <div data-reveal class="reveal proj-card" style="background:#fbfaf7;border:1px solid #e4e2da;border-radius:18px;padding:30px 32px;display:grid;grid-template-columns:0.36fr 0.64fr;gap:32px">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;letter-spacing:0.08em;color:#2b4cff;margin-bottom:14px"><span style="width:6px;height:6px;border-radius:50%;background:#2b4cff"></span>PROJECT_001 · IoT</div>
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:24px;line-height:1.1;letter-spacing:-0.02em">OTA Firmware Update Service</h3>
+      </div>
+      <div>
+        <p style="font-size:15.5px;line-height:1.62;color:#4a4f59;margin-bottom:18px">Led the greenfield design and development of a high-throughput, cloud-native OTA (over-the-air) microservice managing firmware lifecycle for 5M+ IoT devices globally: image pooling, versioned bundle management, and rule-based release targeting across a heterogeneous fleet on GCP. Real-time health and throughput metrics exposed via Micrometer/Prometheus, with Grafana dashboards over pipeline status and delivery health at scale.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Spring Boot</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">GCP PubSub</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Redis</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Micrometer</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Prometheus</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Grafana</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Kubernetes</span>
+        </div>
+      </div>
     </div>
 
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-period">NOV 2016 — NOV 2021</div>
-      <div class="tl-role">Senior Software Engineer</div>
-      <div class="tl-company">Accenture Services Pvt Ltd · Bangalore</div>
-      <ul class="tl-bullets">
-        <li>Backend Java developer on an insurance Agency Management System (AMS) — the central data store for external agencies, agents, and brokers, integrating with 15+ downstream systems including policy issuance, claims, billing, and document management.</li>
-        <li>Developed and maintained microservices and REST APIs on IBM DB2. Addressed SonarQube code quality issues and assisted in CI/CD pipeline setup for new applications.</li>
-        <li>Handled change requests end-to-end: design, implementation, backout planning, QA/UAT coordination, and representation at weekly Change Advisory Board meetings.</li>
-        <li>Recognised with Accenture Celebrates Excellence (ACE) award, Q4 2017.</li>
-      </ul>
+    <div data-reveal class="reveal proj-card" style="background:#fbfaf7;border:1px solid #e4e2da;border-radius:18px;padding:30px 32px;display:grid;grid-template-columns:0.36fr 0.64fr;gap:32px">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;letter-spacing:0.08em;color:#2b4cff;margin-bottom:14px"><span style="width:6px;height:6px;border-radius:50%;background:#2b4cff"></span>PROJECT_002 · IoT</div>
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:24px;line-height:1.1;letter-spacing:-0.02em">Centralized Device Management Tool</h3>
+      </div>
+      <div>
+        <p style="font-size:15.5px;line-height:1.62;color:#4a4f59;margin-bottom:18px">A central tool for managing IoT device simulations used in large-scale automated testing, real-time monitoring and control of simulated devices, configurable launch options, integrated health/status reporting, and log access. Delivered as a web dashboard wired into automation frameworks.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Spring Boot</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Web Dashboard</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">IoT Simulation</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Test Automation</span>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal class="reveal proj-card" style="background:#fbfaf7;border:1px solid #e4e2da;border-radius:18px;padding:30px 32px;display:grid;grid-template-columns:0.36fr 0.64fr;gap:32px">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;letter-spacing:0.08em;color:#2b4cff;margin-bottom:14px"><span style="width:6px;height:6px;border-radius:50%;background:#2b4cff"></span>PROJECT_003 · IoT</div>
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:24px;line-height:1.1;letter-spacing:-0.02em">IoT CRM Tool</h3>
+      </div>
+      <div>
+        <p style="font-size:15.5px;line-height:1.62;color:#4a4f59;margin-bottom:18px">A CRM for managing IoT devices and accessing event histories to support issue resolution. Integrated RSocket and WebSocket for real-time data transfer between the CRM and IoT edge services, multi-environment deployment with Docker, and permission-based access for data-privacy compliance.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Spring Boot</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">RSocket</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">WebSocket</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Docker</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Multi-env</span>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal class="reveal proj-card" style="background:#fbfaf7;border:1px solid #e4e2da;border-radius:18px;padding:30px 32px;display:grid;grid-template-columns:0.36fr 0.64fr;gap:32px">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;letter-spacing:0.08em;color:#2b4cff;margin-bottom:14px"><span style="width:6px;height:6px;border-radius:50%;background:#2b4cff"></span>PROJECT_004 · IoT</div>
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:24px;line-height:1.1;letter-spacing:-0.02em">Notification Template Manager</h3>
+      </div>
+      <div>
+        <p style="font-size:15.5px;line-height:1.62;color:#4a4f59;margin-bottom:18px">A template management system for device notifications, standardizing content across device classes. Web interface for template creation, editing, and preview; a FreeMarker-based Java library for flexible retrieval; bulk operations with secure storage.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Spring Boot</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">FreeMarker</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Template Engine</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">IoT</span>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal class="reveal proj-card" style="background:#fbfaf7;border:1px solid #e4e2da;border-radius:18px;padding:30px 32px;display:grid;grid-template-columns:0.36fr 0.64fr;gap:32px">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;letter-spacing:0.08em;color:#2b4cff;margin-bottom:14px"><span style="width:6px;height:6px;border-radius:50%;background:#2b4cff"></span>PROJECT_005 · E-COMMERCE</div>
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:24px;line-height:1.1;letter-spacing:-0.02em">Equip360 B2B Commerce Platform</h3>
+      </div>
+      <div>
+        <p style="font-size:15.5px;line-height:1.62;color:#4a4f59;margin-bottom:18px">Worked on Equip360, a B2B e-commerce platform for product configuration, warranty/RMA management, 2D/3D commerce-enabled BOM catalogs, and analytics. Implemented RMA, Warranty, and Service Bulletin workflows; maintained code quality via SonarQube and contributed to CI/CD setup.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Spring Boot</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">Multi-tenant</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">30+ Languages</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">CI/CD</span><span style="font-size:12.5px;font-weight:500;color:#33373f;padding:5px 12px;background:#efeee8;border:1px solid #e1dfd6;border-radius:999px">SonarQube</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" style="max-width:1200px;margin:0 auto;padding:80px 40px 40px">
+  <div data-reveal class="reveal">
+    <div style="font-size:12px;font-weight:600;letter-spacing:0.14em;color:#2b4cff;margin-bottom:14px">04 · EXPERIENCE</div>
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:38px;line-height:1.05;letter-spacing:-0.03em;margin-bottom:44px">Career timeline</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:8px">
+
+    <div data-reveal class="reveal tl-row" style="display:grid;grid-template-columns:0.3fr 0.7fr;gap:40px;padding:28px 0;border-top:1px solid #d8d6cd">
+      <div>
+        <div style="font-size:12.5px;font-weight:600;letter-spacing:0.04em;color:#2b4cff;margin-bottom:10px">NOV 2021 – PRESENT</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.01em">Associate Technical Lead</div>
+        <div style="font-size:14px;color:#5d626c;margin-top:4px">ThoughtFocus Ltd · Bangalore</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;gap:12px;font-size:15px;line-height:1.58;color:#4a4f59"><span style="color:#2b4cff;flex:none;margin-top:2px">▸</span><span><strong style="color:#15171c">IoT / Connected Devices (Jul 2022 – Present): </strong>Building and maintaining cloud-native microservices for IoT firmware lifecycle management across millions of devices on GCP, distributed state management, event-driven messaging pipelines, observability with Micrometer/Prometheus/Grafana, and CI/CD via ArgoCD and Kubernetes.</span></div>
+        <div style="display:flex;gap:12px;font-size:15px;line-height:1.58;color:#4a4f59"><span style="color:#2b4cff;flex:none;margin-top:2px">▸</span><span><strong style="color:#15171c">GenAlpha (Nov 2021 – Jun 2022): </strong>Developed features on Equip360, a B2B e-commerce platform, product configuration, warranty/RMA management, 2D/3D BOM catalogs, and analytics. Implemented RMA, Warranty, and Service Bulletin workflows; contributed to CI/CD and code quality with SonarQube.</span></div>
+      </div>
+    </div>
+
+    <div data-reveal class="reveal tl-row" style="display:grid;grid-template-columns:0.3fr 0.7fr;gap:40px;padding:28px 0;border-top:1px solid #d8d6cd">
+      <div>
+        <div style="font-size:12.5px;font-weight:600;letter-spacing:0.04em;color:#2b4cff;margin-bottom:10px">NOV 2016 – NOV 2021</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.01em">Senior Software Engineer</div>
+        <div style="font-size:14px;color:#5d626c;margin-top:4px">Accenture Services Pvt Ltd · Bangalore</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;gap:12px;font-size:15px;line-height:1.58;color:#4a4f59"><span style="color:#2b4cff;flex:none;margin-top:2px">▸</span><span><strong style="color:#15171c">Insurance Agency Management System: </strong>Backend Java developer on the central data store for external agencies, agents, and brokers, integrating with 15+ downstream systems across policy issuance, claims, billing, and document management.</span></div>
+        <div style="display:flex;gap:12px;font-size:15px;line-height:1.58;color:#4a4f59"><span style="color:#2b4cff;flex:none;margin-top:2px">▸</span><span><strong style="color:#15171c">Microservices & delivery: </strong>Built and maintained microservices and REST APIs backed by IBM DB2, drove SonarQube quality, ran change requests end-to-end through CAB, and earned the Accenture Celebrates Excellence (ACE) award, Q4 2017.</span></div>
+      </div>
     </div>
 
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <div class="s-label">05 // CONTACT</div>
-  <div class="contact-wrap">
-    <h2 class="s-title">Open a Channel</h2>
-    <p class="contact-intro">
-      I'm always interested in discussing IoT systems, distributed architectures,
-      cloud-native migrations, or anything that involves making devices talk to each other.
-      Drop me a line — I'll respond when the cron job fires.
-    </p>
-    <div class="contact-links">
-      <a href="mailto:harishkakubalmath@gmail.com" class="c-link">
-        <div class="c-icon">✉</div>
-        <div class="c-label">Email</div>
-        <div class="c-val">harishkakubalmath@gmail.com</div>
+<section id="contact" style="max-width:1200px;margin:0 auto;padding:80px 40px 40px">
+  <div data-reveal class="reveal" style="background:#15171c;border-radius:24px;padding:56px 56px 48px;color:#fff;position:relative;overflow:hidden">
+    <div style="position:absolute;top:-40px;right:-20px;opacity:0.5">
+      <svg width="320" height="240" viewBox="0 0 320 240">
+        <circle cx="60" cy="60" r="6" fill="#2b4cff"/><circle cx="200" cy="40" r="6" fill="#15b86b"/><circle cx="280" cy="120" r="6" fill="#2b4cff"/><circle cx="140" cy="150" r="6" fill="#15b86b"/><circle cx="60" cy="180" r="6" fill="#2b4cff"/>
+        <path d="M60,60 L200,40 M200,40 L280,120 M280,120 L140,150 M140,150 L60,180 M60,180 L60,60" stroke="#3a3f4d" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+    <div style="position:relative;max-width:560px">
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.14em;color:#6b7080;margin-bottom:16px">05 · CONTACT</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:40px;line-height:1.04;letter-spacing:-0.03em;margin-bottom:18px">Let's build<br>something solid.</h2>
+      <p style="font-size:17px;line-height:1.6;color:#aeb2bd;margin-bottom:36px">Open to roles in IoT platforms, distributed systems, and cloud-native backend engineering. Reach out, I'll get back to you promptly.</p>
+    </div>
+    <div class="contact-grid" style="position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+      <a href="mailto:harishkakubalmath@gmail.com" class="contact-card" style="background:#1d1f26;border:1px solid #2c2f38;border-radius:14px;padding:20px">
+        <div style="font-size:11px;letter-spacing:0.1em;color:#6b7080;font-weight:600;margin-bottom:8px">EMAIL</div>
+        <div style="font-size:14px;font-weight:500;word-break:break-all">harishkakubalmath@gmail.com</div>
       </a>
-      <a href="https://www.linkedin.com/in/harish-km" class="c-link" target="_blank">
-        <div class="c-icon">⬡</div>
-        <div class="c-label">LinkedIn</div>
-        <div class="c-val">linkedin.com/in/harish-km</div>
+      <a href="https://www.linkedin.com/in/harish-km" target="_blank" class="contact-card" style="background:#1d1f26;border:1px solid #2c2f38;border-radius:14px;padding:20px">
+        <div style="font-size:11px;letter-spacing:0.1em;color:#6b7080;font-weight:600;margin-bottom:8px">LINKEDIN</div>
+        <div style="font-size:14px;font-weight:500">linkedin.com/in/harish-km</div>
       </a>
-      <a href="tel:+919738052511" class="c-link">
-        <div class="c-icon">◈</div>
-        <div class="c-label">Phone</div>
-        <div class="c-val">+91 97380 52511</div>
+      <a href="tel:+919738052511" class="contact-card" style="background:#1d1f26;border:1px solid #2c2f38;border-radius:14px;padding:20px">
+        <div style="font-size:11px;letter-spacing:0.1em;color:#6b7080;font-weight:600;margin-bottom:8px">PHONE</div>
+        <div style="font-size:14px;font-weight:500">+91 97380 52511</div>
       </a>
-      <a href="assets.pdf" download="Harish_Kakubal_Resume.pdf" class="c-link">
-        <div class="c-icon">📄</div>
-        <div class="c-label">Resume</div>
-        <div class="c-val">Download PDF</div>
+      <a href="assets.pdf" download="Harish_Kakubal_Math_Resume.pdf" class="contact-card-cta" style="background:#2b4cff;border:1px solid #2b4cff;border-radius:14px;padding:20px">
+        <div style="font-size:11px;letter-spacing:0.1em;color:#bcc6ff;font-weight:600;margin-bottom:8px">RÉSUMÉ</div>
+        <div style="font-size:14px;font-weight:600">Download PDF ↓</div>
       </a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="ft">© 2026 <span><a href="https://www.linkedin.com/in/harish-km" class="c-val" target="_blank">HARISH KAKUBAL MATH</a></span> </div>
-  <div class="ft">BUILT WITH <span>THREE.JS</span> + <span>GSAP</span> + CAFFEINE</div>
+<footer style="max-width:1200px;margin:0 auto;padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#8a8f98">
+  <div>© 2026 Harish Kakubal Math</div>
+  <div style="display:flex;align-items:center;gap:8px"><span style="width:7px;height:7px;border-radius:50%;background:#15b86b;animation:blink 1.6s infinite"></span>Systems online</div>
 </footer>
 
-<script src="js/three-scene.js"></script>
-<script src="js/bots-canvas.js"></script>
-<script src="js/typewriter.js"></script>
-<script src="js/animations.js"></script>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
